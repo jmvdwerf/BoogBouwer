@@ -42,11 +42,34 @@
 
     <div class="container">
 
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Instellingen</div>
+            <div class="panel-body">Formulier</div>
+            <div class="panel-footer">Knoppen</div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Voorbeeld</div>
+            <div class="panel-body">
+                Hier komt het plaatje
+            </div>
+        </div>
+    </div>
       
-
     </div> <!-- /container -->
-
-
+    <div class="container">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">OpenSCAD Code</div>
+                <div class="panel-body">
+                    <pre>Dit is de code</pre>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
