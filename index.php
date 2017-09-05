@@ -1,3 +1,16 @@
+<?php 
+
+require_once("./src/Instellingen.php");
+require_once("./src/Vorm.php");
+require_once("./src/Boog.php");
+
+$settings = new Instellingen(30, 80);
+
+//var_dump($settings);
+
+$boog = new Boog($settings);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +20,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>BoogBouwer</title>
 
@@ -54,7 +66,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">Voorbeeld</div>
             <div class="panel-body">
-                Hier komt het plaatje
+				<?php echo $boog->printSVG(); ?>
             </div>
         </div>
     </div>
@@ -64,8 +76,10 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">OpenSCAD Code</div>
-                <div class="panel-body">
-                    <pre>Dit is de code</pre>
+                <div class="panel-body form-horizontal">
+                    <textarea rows="10" class="form-control"><?php 
+                        echo $boog->printScad();
+                    ?></textarea>
                 </div>
             </div>
         </div>
