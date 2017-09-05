@@ -65,7 +65,7 @@ class Vierhoek
         return $str;
     }
     
-    public function printSVG($color = 'blue', Punt $offset = null, Punt $scale = null): string
+    public function printSVG($color = 'sandybrown', Punt $offset = null, Punt $scale = null): string
     {
         if ($offset == null) $offset = new Punt();
         if ($scale == null) $scale = new Punt(1,1);

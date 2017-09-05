@@ -227,11 +227,11 @@ class Boog
         return $str;
     }
     
-    public function printSVG($color = 'blue', $scaleX = 3): string
+    public function printSVG($color = 'sandybrown', $scaleX = 1): string
     {
         $scale = new Punt($scaleX, $scaleX);
         
-        $str = '<svg width="'.(2*$this->max->multiply($scale)->getX()).'" height="'.($this->max->multiply($scale)->getY()).'">'."\n\t";
+        $str = '<svg id="'.$this->settings->getModuleName().'" viewbox="0 0 '.(2*$this->max->multiply($scale)->getX()).' '.($this->max->multiply($scale)->getY()).'">'."\n\t";
         $offset = $this->max->multiply($scale);
         
         $scale->setY(-1*$scale->getY());

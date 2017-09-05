@@ -25,9 +25,18 @@ $boog = new Boog($settings);
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-    <!-- Custom styles for this template -->
-    <link href="navbar-static-top.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    	<style>
+.wrap svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+    	</style>
 
   </head>
 
@@ -66,7 +75,9 @@ $boog = new Boog($settings);
         <div class="panel panel-default">
             <div class="panel-heading">Voorbeeld</div>
             <div class="panel-body">
-				<?php echo $boog->printSVG(); ?>
+            	<div class="wrap">
+					<?php echo $boog->printSVG(); ?>
+				</div>
             </div>
         </div>
     </div>
@@ -84,10 +95,6 @@ $boog = new Boog($settings);
             </div>
         </div>
     </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
